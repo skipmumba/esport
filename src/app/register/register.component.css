@@ -1,0 +1,36 @@
+.wrap-reister
+{
+	position: fixed;
+	margin:0 auto;
+	top: 20%;
+	left: 50%;
+	margin-left: -250px;
+	z-index: 10;
+}
+.block-register
+{
+	background: #D7D7D7;
+	width:300px;
+	padding-bottom: 10px;
+}
+.title-register
+{
+	padding:15px ;
+	background: #0F0F0F;
+	color:#FFF;
+	font-size: 20px;
+}
+.panel-register
+{
+	margin: 20px 10px 20px 10px;
+}
+.panel-register input
+{
+	margin-bottom: 10px;
+}
+.text-form-error
+{
+	margin:0px;
+	padding: 0px;
+	color:red;
+}

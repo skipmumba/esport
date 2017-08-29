@@ -1,0 +1,186 @@
+<div class="container">
+
+	<div class="col-md-9">
+		<div class="row">
+
+				<div class="content">
+				
+					<app-tabdate (emitTab)="getTabChoose($event)"></app-tabdate>
+					
+
+
+
+				<div class="loadSpin" *ngIf="spinShow">
+					<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+				</div>
+
+
+					<div  *ngFor="let getMatch of listMatch">
+						<div class="wrap-per-game clearfix">
+
+							<div class="block-subject-game-mode clearfix">
+								<div class="subject-cat">
+									{{getMatch.catName}} 
+								</div>
+								<div class="refresh-match-cat">
+									<i class="fa fa-refresh" aria-hidden="true"></i>
+								</div>
+							</div>
+
+							<div *ngFor="let matchDetail of getMatch.matchDetail">
+								
+								<div class="wrap-vs-block clearfix"> <!-- content -->
+									<div class="col-md-5">
+										<div class="row">
+											<div class="block-list-vs firstvs">
+												<div class="text-team-list team-selected">
+													{{matchDetail.team1}}<br>
+													<span>{{matchDetail.percent1}}%</span><br>
+													<div class="odds-per-team">x1.8</div>
+												</div>
+												<div class="img-team-list">
+													<img src="{{matchDetail.pic1}}" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="row">
+											<div class="block-list-vs between-vs">
+												<div class="vs-in">
+													<div class="vs-in-again">
+														<span>20 ชม.จากนี้</span><br>
+														VS
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-5">
+										<div class="row">
+											<div class="block-list-vs second-vs" style="color:#FF6600">
+												<div class="text-team-list rightTeamText">
+													{{matchDetail.team2}}<br>
+													<span>{{matchDetail.percent2}}%</span><br>
+													<div class="odds-per-team">x1.8</div>
+												</div>
+												<div class="img-team-list rightTeamImg">
+													<img src="{{matchDetail.pic2}}" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>	<!-- end content -->						
+							
+							</div>
+
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+<!-- sidebar -->
+	<div class="col-md-3">
+		<div class="row">
+			<div class="sidebar">
+
+				<div class="block-general-sidebar">
+					<div class="subject-sidebar">
+						ทายผล
+					</div>
+					<div class="team-choose">
+						<b>SPARTAN</b><br>x 1.8 <br>
+						<span>คู่ SPARTAN VS DAVIZON</span>
+					</div>
+					<div class="bet-input clearfix">
+						<div class="text-input-bet">
+							<input type="text" class="form-control user-inputbet" name="" value="">
+						</div>
+						<div class="confirm-bet">
+							<input type="submit" class="btn btn-success" name="" value="ยืนยัน">
+						</div>
+					</div>
+				</div>
+
+				<div class="block-general-sidebar">
+					<div class="subject-sidebar">
+						รายการ
+					</div>
+					<div class="list-bet-team clearfix">
+						<div class="subject-table table-name-team">
+							ทีม
+						</div>
+						<div class="subject-table table-point-team ">
+							พ้อย
+						</div>
+
+						<!-- listbeth -->
+						<div class="table-name-team">
+							DIVIZON
+						</div>
+						<div class="table-point-team">
+							2000
+						</div>
+						<!-- end listbeth -->
+						<!-- listbeth -->
+						<div class="table-name-team">
+							DIVIZON
+						</div>
+						<div class="table-point-team">
+							2000
+						</div>
+						<!-- end listbeth -->
+						<!-- listbeth -->
+						<div class="table-name-team">
+							DIVIZON
+						</div>
+						<div class="table-point-team">
+							2000
+						</div>
+						<!-- end listbeth -->
+						<!-- listbeth -->
+						<div class="table-name-team">
+							DIVIZON
+						</div>
+						<div class="table-point-team">
+							2000
+						</div>
+						<!-- end listbeth -->
+						<!-- listbeth -->
+						<div class="table-name-team">
+							DIVIZON
+						</div>
+						<div class="table-point-team">
+							2000
+						</div>
+						<!-- end listbeth -->
+						<!-- listbeth -->
+						<div class="table-name-team">
+							DIVIZON
+						</div>
+						<div class="table-point-team">
+							2000
+						</div>
+						<!-- end listbeth -->
+						<!-- listbeth -->
+						<div class="table-name-team">
+							DIVIZON
+						</div>
+						<div class="table-point-team">
+							2000
+						</div>
+						<!-- end listbeth -->
+						<div class="">
+							<b style="visibility: hidden;">null</b>
+						</div>
+
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>

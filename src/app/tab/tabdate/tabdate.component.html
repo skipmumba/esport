@@ -1,0 +1,13 @@
+<div class="wrap-daily">
+	<ul class="daily-ul">
+		<li  class="daily-li"  *ngFor="let tab of listTab;let i = index;" 
+			(click)="emitDateClick(tab.day,tab.month,tab.year,i)"
+			[ngClass]="{'selected-day': tabId == i}">
+			{{tab.day}}/{{tab.month}}/{{tab.year}}
+		</li>
+		<!-- <li class="daily-li">1/8/17</li>
+		<li class="daily-li selected-day">รายการวันนี้</li>
+		<li class="daily-li">3/8/17</li>
+		<li class="daily-li">4/8/17</li> -->
+	</ul>
+</div>

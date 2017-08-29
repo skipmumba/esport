@@ -1,0 +1,47 @@
+<div class="wrap-reister" style="display: none;">
+	<div class="block-register">
+		<div class="title-register">
+			สมัครสมาชิก
+		</div>
+		<div class="panel-register">
+			<form #regisForm="ngForm" (ngSubmit)="onSubmit(regisForm)">
+
+				<div *ngIf="emailAlready" class="text-form-error">
+					มีผู้อื่นใช้แล้ว
+				</div>
+				<div *ngIf="emailState.invalid && !emailState.pristine " class="text-form-error">
+					<div *ngIf="emailState.errors.required">
+						ห้ามเว้นว่าง
+					</div>
+
+					<div *ngIf="emailState.errors.minlength">
+						ต้องมากกว่า 6 ตัวอักษร
+					</div>
+					<div *ngIf="emailState.errors.pattern">
+						รูปแบบอีเมลไม่ถูกต้อง
+					</div>
+				</div>
+				<input type="text" class="form-control"  placeholder="อีเมล" [(ngModel)]="regisInfo.email"
+				name="email" 	minlength="6" #emailState="ngModel" (blur)="check_email()"
+				required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+
+				<div *ngIf="passState.invalid && !passState.pristine" class="text-form-error">
+					<div *ngIf="passState.errors.required">
+						ห้ามเว้นว่าง
+					</div>
+					<div *ngIf="passState.errors.minlength">
+						ต้องมากกว่า 6 ตัวอักษร
+					</div>
+
+				</div>
+
+				<input type="text" class="form-control" placeholder="รหัสผ่าน" [(ngModel)]="regisInfo.pass"
+				name="password" required minlength="6" #passState="ngModel">
+				<div style="text-align:center">
+
+					<input type="submit"   class="btn btn-success" name="" value="ลงทะเบียน">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
